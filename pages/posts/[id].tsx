@@ -4,8 +4,8 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Date from "@/components/date";
 import utilStyles from '../../styles/utils.module.scss'
 
-export async function getStaticProps({ params }) {
-	const postData = await getPostData(params.id);
+export async function getStaticProps({ params }: { params: any }) {
+	const postData= await getPostData(params.id);
 	return {
 		props: {
 			postData,
@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 	};
 }
 
-const Post = ({ postData }: { postData: object }) => {
+const Post = ({ postData }: { postData: any }) => {
 	return (
 		<Layout>
 			<Head>
