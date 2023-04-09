@@ -4,10 +4,17 @@ import styles from './layout.module.scss';
 import utilStyles from '../styles/utils.module.scss';
 import Link from 'next/link';
 
-const name:string = 'Kamalesh Suthar';
-export const siteTitle:string = 'Next.js Sample Website';
+const name: string = 'Kamalesh Suthar';
+export const siteTitle: string = 'Next.js Sample Website';
 
-export default function Layout({ children, home }: { children: JSX.Element | JSX.Element[] , home?:Boolean}) {
+export default function Layout(
+	{
+		children,
+		home
+	} : {
+		children: React.ReactNode,
+		home?: Boolean
+	}) {
 	return (
 		<div className={styles.container}>
 			<Head>
